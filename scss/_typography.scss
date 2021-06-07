@@ -1,0 +1,35 @@
+@import "mixins/typography";
+@import "mixins/media-queries";
+
+// font-family: "Arimo", sans-serif; 
+
+// typography style define here
+
+body {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: $heading-4;
+  line-height: 1.7;
+  color: $color-black;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+p {
+  @include p;
+}
+

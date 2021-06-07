@@ -1,0 +1,34 @@
+/******************************************************************
+  Template Name: StudioRecord
+  Description: StudioRecord - Template
+  Author: Colorib
+  Author URI: https://www.colorib.com/
+  Version: 1.0
+  Created: Colorib 
+******************************************************************/
+
+// site variables 
+@import "variables";
+
+// typography 
+@import "fonts/fonts";
+@import "typography";
+
+// site modules are declare here
+@import "modules/modules";
+@import "forms/forms";
+
+// base style declare here
+@import "base/base";
+@import "base/utilities";
+@import "base/animation";
+@import "base/button";
+
+
+// partials are adedd here
+@import "partials/partials";
+@import "partials/top_bar";
+
+
+// all pages are adedd here
+@import "pages/pages";

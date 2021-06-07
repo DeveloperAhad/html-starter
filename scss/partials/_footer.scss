@@ -1,0 +1,225 @@
+@import "../variables";
+@import "../mixins/media-queries";
+
+// footer section style start
+
+#footer_wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  // footer insta feed style start
+  .instagram_feed_wrapper {
+    width: 100%;
+
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .insta_feed__slider {
+      width: 100%;
+
+      .insta_feed-slider-item {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        position: relative;
+
+        &:hover .insta_feed-bg {
+          transition: 0.4s ease-in-out;
+          backface-visibility: hidden;
+          visibility: visible;
+          opacity: 1;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        .insta_feed-bg {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all 0.4s ease-in-out;
+          background: rgba($primary-color-light, 0.7);
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        .insta_feed-content {
+          width: 100%;
+          height: fit-content;
+          position: absolute;
+          top: calc(50% - 38px);
+          left: 0;
+          text-align: center;
+          color: $color-white;
+
+          .insta-feed-icon {
+            margin-bottom: 23px;
+
+            i {
+              font-size: $heading-2;
+            }
+          }
+
+          .insta-feed-title .heading-20 {
+            font-family: $arimo-font;
+            font-weight: 700;
+            font-size: $heading-20;
+          }
+
+          .insta-feed-id .heading-4 {
+            font-size: $heading-15;
+          }
+        }
+      }
+    }
+  }
+  // footer insta feed style end
+
+  // foonter details style start
+
+  .footer-details-content {
+    width: 100%;
+    height: auto;
+    background-color: $primary-bg-color;
+
+    .foonter-details-heading {
+      text-align: center;
+
+      .brand-logo {
+        margin-bottom: 20px;
+      }
+
+      .nav-bar {
+        width: 100%;
+
+        .navbar_nav {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          .nav-link {
+            font-family: $arimo-font;
+            font-size: $heading-15;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: $color-white;
+
+            &:hover {
+              color: $primary-color-light;
+            }
+          }
+
+          @include respond (tab-port) {
+            flex-direction: column;
+          }
+        }
+      }
+    } //footer heading end
+
+    .company-details {
+      width: 100%;
+      height: auto;
+
+      .container {
+        .col-md-4 {margin-bottom: 30px;}
+      }
+
+      .company-details-single {
+        width: 95%;
+        height: 149px;
+        border: 1px solid;
+        border-color: rgba(255, 255, 255, .1);
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+
+        .address-line-title {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          padding: 38px 0 0 0;
+
+          .email-contact a, .phone-number a {
+            color: $color-white;
+          }
+        }
+
+        .address {
+          width: 80px;
+          height: auto;
+          background-color: $primary-bg-color;
+          position: absolute;
+          top: -15px;
+          left: calc(50% - 32px);
+
+          i {
+            font-size: 30px;
+            color: $primary-color-light;
+          }
+
+          span {
+            color: $color-white;
+          }
+        }
+
+        .address-line-title h2 {
+          font-family: $arimo-font;
+          font-size: 16px;
+          font-weight: 700;
+          color: $color-white;
+
+          @include respond (phone) {
+            font-size: 15px;
+          }
+        }
+
+        .address-line,
+        .email-contact,
+        .phone-number {
+          font-family: $secondary-heading-font;
+          font-weight: 400;
+          font-size: 14px;
+          color: $color-white;
+          padding: 0 60px;
+
+          @include respond (tab-port) {
+            padding: 0 30px;
+            line-height: 1.5;
+          }
+          @include respond (phone) {padding: 0 20px;}
+        }
+      }
+    }
+  }
+  // foonter details style end
+
+  // copyright-text 
+  .copyright-text {
+    border-top: 1px solid #707070;
+    width: 100%;
+    padding: 23px 0;
+
+    p {
+      margin: 0;
+      font-family: $secondary-heading-font;
+      font-size: $heading-4;
+      font-weight: 400;
+      color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include respond (phone) {font-size: 12px;}
+    }
+
+  }
+}
+
+// footer section style end

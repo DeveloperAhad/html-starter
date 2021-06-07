@@ -1,0 +1,135 @@
+@import "../mixins/media-queries";
+
+// studio services section style define here
+.studio_services {
+  width: 100%;
+  height: 100%;
+  // .slider-btn {
+  // slider button style define in button file
+  // }
+
+  .row {
+    margin: 0 0 0 0;
+  }
+  // .section_content_title {
+  //   style declare in utility
+  // }
+
+  .service_section-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .studio_service-slider {
+      width: 100%;
+      height: 100%;
+    }
+
+    .service_carousel_item {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      
+
+      @include respond(tab-land) {
+        width: 100%;
+      }
+
+      .service_single_image {
+        width: 100%;
+      }
+      .service_carousel_text {
+        background-image: url(../img/studio_section/bottom_shade.svg);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        padding: 25px 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: -50px;
+        overflow: hidden;
+        transition: all 0.5s ease-in;
+
+        @include respond (tab-land) {padding: 30px 0;}
+      }
+    }
+
+    // item hover effect declaire
+    .service_carousel_item:hover .service_carousel_text {
+      transition: all 0.5s ease-in;
+      margin-bottom: 50px;
+    } // item hover effect end
+
+    .service_carousel_heading {
+      font-size: $heading-24;
+    }
+
+    .service_carousel_title {
+      font-size: 20px;
+    }
+
+    .service_carousel_title,
+    .service_carousel_heading {
+      font-family: $arimo-font;
+      font-weight: 700;
+      font-size: $heading-24;
+      text-transform: uppercase;
+
+      @include respond (tab-land) {
+        font-size: 22px;
+      }
+    }
+
+    .heading-23,
+    p {
+      display: block;
+      color: $color-white;
+    }
+
+    .service_carousel_paragraph {
+      font-size: $heading-15;
+      font-family: $secondary-heading-font;
+      font-weight: 400;
+      margin-bottom: 0;
+      padding: 0 50px 30px;
+      line-height: 2;
+
+      @include respond(tab-land) {
+        font-size: $heading-4;
+        padding: 0 20px 25px;
+      }
+      @include respond(tab-port) {
+        padding: 0 16px 15px;
+      }
+      @include respond(tab-middle) {
+        font-size: $heading-4;
+        padding: 0 40px 28px;
+      }
+      @include respond(phone) {
+        padding: 0 28px 20px;
+      }
+      
+    }
+
+    .book-service-btn {
+      font-family: $arimo-font;
+      font-size: $heading-15;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: $color-white;
+    }
+
+    .service_carousel_item.border-rounded-min:hover {
+      .service_carousel_text {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

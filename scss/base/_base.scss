@@ -1,0 +1,54 @@
+@import "../mixins/media-queries";
+
+/*reset style */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background: #edf2f6;
+  section {
+    overflow: hidden;
+  }
+}
+
+//container fluid reset
+.container {
+  max-width: 1520px;
+  padding: 0 55px;
+
+  @include respond(tab-port) {
+    padding: 0 25px;
+  }
+
+  @include respond(phone) {
+    padding: 0 20px;
+  }
+
+  @media only screen and (max-width: 1440px) {
+    max-width: 1140px;
+    padding: 0 35px;
+  }
+}
+
+/*reset style */
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  transition: all 0.2s;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+}

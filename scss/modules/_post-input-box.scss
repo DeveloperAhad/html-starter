@@ -1,0 +1,112 @@
+//Post input Box
+
+.post-input-box {
+    position: relative;
+    padding: 20px 30px 0px;
+    background: $color-white;
+    border-radius: 17px;
+    margin-bottom: 15px;
+    h5 {
+        display: inline-block;
+        font-size: $heading-15;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .post-input-more {
+        float: right;
+        color: #949494;
+        font-size: 23px;
+        position: relative;
+        top: -10px;
+    }
+    .post-input-edit {
+        position: absolute;
+        right: 30px;
+        top: 50px;
+        color: #949494;
+        font-size: 20px;
+    }
+    .post-box-avatar {
+        position: absolute;
+        top: 65px;
+        left: 30px;
+        border-radius: 10px;
+    }
+    textarea {
+        padding: 10px 40px 10px 70px;
+        border: none;
+        border-bottom: 1px solid #ebebeb;
+        width: 100%;
+        height: 50%;
+        margin-bottom: 5px;
+        resize: none;
+        font-size: 14px;
+        &:focus {
+            outline: none;
+        }
+    }
+    .post-btn {
+        display: inline-block;
+        border: none;
+        font-size: 14px;
+        padding: 10px 15px;
+        border-radius: 17px;
+        margin-right: 6px;
+        margin-bottom: 15px;
+        &:focus {
+            outline: none;
+        }
+        i {
+            font-size: 20px;
+            display: inline-block;
+        }
+        &.pb-photo {
+            color: #0059f8;
+            background: #e5eefe;
+            i {
+                position: relative;
+                margin-right: 10px;
+                top: 4px;
+            }
+        }
+        &.pb-video {
+            color: #01d42e;
+            background: #e6f8ea;
+            i {
+                position: relative;
+                margin-right: 10px;
+                top: 4px;
+            }
+        }
+        &.pb-video-2 {
+            color: #fba82a;
+            background: #fff6e9;
+            text-align: center;
+            padding: 9px 7px 10px 17px;
+            i {
+                position: relative;
+                margin-right: 10px;
+                top: 4px;
+            }
+        }
+        &.pb-plus {
+            color: #e0191d;
+            background: #fce8e8;
+            text-align: center;
+            padding: 9px 3px 10px 14px;
+            i {
+                position: relative;
+                margin-right: 10px;
+                top: 4px;
+            }
+        }
+        &.post-submit {
+            margin-right: 0;
+            float: right;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $color-white;
+            background: #0059f8;
+        }
+    }
+}

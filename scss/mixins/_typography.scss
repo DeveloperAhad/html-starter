@@ -1,0 +1,83 @@
+@import "media-queries";
+@import "../variables";
+
+// typhography mixins start
+@mixin h1 {
+  font-family: $primary-font;
+  backface-visibility: hidden;
+}
+
+@mixin h2 {
+  font-family: $primary-font;
+  font-size: $heading-2;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+
+  @include respond(tab-port) {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  @include respond(phone) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@mixin h3 {
+  font-family: $primary-font;
+  font-size: $heading-3;
+  text-transform: uppercase;
+  font-weight: 700;
+  @include respond(tab-port) {
+    font-size: 14px;
+  }
+}
+
+@mixin h4 {
+  font-size: $heading-4;
+  font-weight: 400;
+}
+
+@mixin h5 {
+  text-transform: uppercase;
+  font-family: $primary-font;
+  font-size: $heading-20;
+  font-weight: 700;
+}
+
+@mixin p {
+  font-size: 18px;
+  color: $body-font-color;
+  line-height: 30px;
+  font-weight: 400;
+  @include respond(phone) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@mixin heading-24 {
+  margin-bottom: 6px;
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: $heading-24;
+  @include respond (tab-port) {
+    font-size: 20px;
+  }
+  @include respond (phone) {
+    font-size: 18px;
+  }
+}
+
+@mixin heading-16 {
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+// typhography mixins end

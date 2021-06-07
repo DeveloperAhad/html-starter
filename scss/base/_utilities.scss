@@ -1,0 +1,232 @@
+.mb_18 {
+  margin-bottom: 18px;
+  @include respond(tab-port) {
+    margin-bottom: 13px;
+  }
+}
+
+.mt_130 {
+  margin-top: 130px;
+  @include respond(tab-port) {
+    margin-top: 60px;
+  }
+}
+
+.mb_130 {
+  margin-bottom: 130px;
+  @include respond(tab-port) {
+    margin-bottom: 60px;
+  }
+}
+
+.pt_130 {
+  padding-top: 130px;
+  @include respond(tab-port) {
+    padding-top: 60px;
+  }
+}
+
+.pb_130 {
+  padding-bottom: 130px;
+  @include respond(tab-port) {
+    padding-bottom: 60px;
+  }
+}
+
+.mt_90_max {
+  margin-top: 90px;
+  @include respond(tab-port) {
+    margin-top: 60px;
+  }
+
+  @include respond (phone) {
+    margin-top: 25px;
+  }
+}
+
+.mb_90_max {
+  margin-bottom: 90px;
+  @include respond(tab-port) {
+    margin-bottom: 60px;
+  }
+  
+  @include respond (phone) {
+    margin-bottom: 25px;
+  }
+}
+
+.mt_65_max {
+  margin-top: 65px;
+}
+.mb_65_max {
+  margin-bottom: 65px;
+}
+
+.pt_90_max {
+  padding-top: 90px;
+  @include respond(tab-port) {
+    padding-top: 60px;
+  }
+}
+.pb_90_max {
+  padding-bottom: 90px;
+  @include respond(tab-port) {
+    padding-bottom: 60px;
+  }
+}
+
+.pt_98_max {
+  padding-top: 98px;
+  @include respond(tab-port) {
+    padding-top: 60px;
+  }
+}
+
+.pb_100_max {
+  padding-bottom: 100px;
+  @include respond(tab-port) {
+    padding-bottom: 60px;
+  }
+}
+
+.pr-30 {
+  padding-right: 30px;
+}
+
+.mb-42 {
+  margin-bottom: 42px;
+}
+.mb_100 {
+  margin-bottom: 100px;
+}
+
+.border-rounded-min {
+  border-radius: 10px;
+}
+
+.color-gold {
+  color: #f5d44a;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.heading-20 {
+  font-size: 20px;
+}
+
+// section heading style declair hare
+.section_content_title {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .content_subtitle h3 {
+    font-family: Now;
+    font-size: $heading-4;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary-color-light;
+  }
+
+  .content_title h2 {
+    font-family: $arimo-font;
+    font-size: $heading-2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-black;
+
+    @include respond(tab-port) {
+      font-size: 30px;
+      line-height: normal;
+    }
+    @include respond(phone) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @include respond(phone-medium) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+} // section heading style end
+
+// pricing card "recomended" design start
+.recommended {
+  .card {
+    border: 2px solid $primary-color-light;
+    border-radius: 0 0 10px 10px;
+
+    .pricing-heading {
+      background: linear-gradient(to top, #7c35df, #2e55ff);
+    }
+
+    .create-btn {
+      color: #fff;
+      font-weight: 700;
+      font-family: $arimo-font;
+      letter-spacing: 2px;
+      background-color: $primary-color-light;
+      border-color: $primary-color-light;
+      text-transform: uppercase;
+      border-radius: 10px;
+    }
+    
+    .create-btn:hover {
+      color: $color-black;
+      background-color: #ffffff00;
+      border-color: #0062cc;
+    }
+    
+    .create-btn:focus,
+    .create-btn.focus {
+      color: $color-black;
+      background-color: #0069d9;
+      border-color: #0062cc;
+      border-radius: 10px;
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    }
+    
+    .create-btn.disabled,
+    .create-btn:disabled {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    
+    .create-btn:not(:disabled):not(.disabled):active,
+    .create-btn:not(:disabled):not(.disabled).active,
+    .show > .create-btn.dropdown-toggle {
+      color: #fff;
+      background-color: #0062cc;
+      border-color: #005cbf;
+    }
+    
+    .create-btn:not(:disabled):not(.disabled):active:focus,
+    .create-btn:not(:disabled):not(.disabled).active:focus,
+    .show > .create-btn.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    }
+  }
+}
+// pricing card "recomended" design end
+
+// contact form design define here
+.user-comment-entry {
+  #exampleFormControlTextarea1 {
+    padding: 12px;
+    resize: none;
+  }
+  .form-control {
+    padding: 22px 12px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .btn-primary-solid {
+    border-radius: 5px;
+    width: 100%;
+  }
+}

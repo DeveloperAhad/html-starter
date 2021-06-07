@@ -1,0 +1,150 @@
+@import "../mixins/media-queries";
+
+// company team style start
+
+.company_team-section-wrapper {
+  width: 100%;
+
+  .company_team-section-heading {
+    width: 100%;
+    text-align: center;
+
+    .company_team-section-sub-title h3 {
+      color: $primary-color-light;
+      margin-bottom: 18px;
+    }
+  }
+
+  .company_team-section-content {
+    width: 100%;
+    height: auto;
+
+    .company_team-member-card {
+      width: 100%;
+
+      .social_links-set {
+        position: absolute;
+        top: 95px;
+        right: 20px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+
+        @include respond(desktop) {
+          top: 59px;
+        }
+        @include respond(tab-port) {
+          top: 95px;
+          right: 47px;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+
+        .social-facebook {
+          color: #3b5998;
+          position: absolute;
+          top: -59px;
+          right: 9px;
+        }
+
+        .social-twitter {
+          color: #00acee;
+        }
+        .social-instagram {
+          color: #cc307e;
+        }
+
+        .social-links {
+          width: 40px;
+          height: 40px;
+          background: $color-white;
+          border: none;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+
+          i {
+            font-size: 18px;
+          }
+
+          @include respond(desktop) {
+            height: 35px;
+            width: 35px;
+          }
+          @include respond(tab-port) {
+            height: 43px;
+            width: 43px;
+          }
+        }
+      }
+
+      .card {
+        cursor: pointer;
+        border: none;
+        margin-right: 24px;
+
+        &:hover > .card-image > .social_links-set {
+          transition: 0.4s ease-in-out;
+          visibility: visible;
+          opacity: 1;
+        }
+
+        @include respond(tab-port) {
+          margin-bottom: 33px;
+        }
+      }
+
+      .card-image {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .card-image-top {
+          width: 75%;
+        }
+      }
+
+      .card-body {
+        padding: 0;
+        text-align: center;
+        .card-title {
+          margin-bottom: 16px;
+          @include h5;
+
+          @include respond (tab-port) {font-size: 18px; margin-bottom: 8px;}
+          @include respond (phone) {font-size: 18px; margin-bottom: 5px;}
+        }
+
+        .card-text {
+          font-family: "now";
+          font-weight: 400;
+          font-size: 15px;
+          padding: 0 15px;
+
+          @include respond (tab-port) {line-height: 1.7;}
+        }
+      }
+    }
+
+    .team-meet-btn {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+
+      @include respond (tab-port) {margin-top: 20px;}
+      @include respond (phone) {margin-top: 10px;}
+    }
+  }
+}
+
+// company team style end

@@ -1,0 +1,71 @@
+// Top bar
+.top-bar-section {
+    padding: 10px 0 9px;
+    background: $primary-color-light;
+}
+
+.site-logo {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.main-search-form {
+    max-width: 470px;
+    margin: 0 auto;
+    position: relative;
+    input {
+        height: 40px;
+        width: 100%;
+        padding-right: 50px;
+        padding-left: 20px;
+        color: $color-white;
+        border-radius: 100px;
+        border: 1px solid #76a1f1;
+        background-color: transparent;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &::placeholder {
+            color: #76a1f1;
+        }
+    }
+    button {
+        position: absolute;
+        width: 50px;
+        height: 40px;
+        right: 0;
+        top: 0;
+        background: transparent;
+        border: none;
+        color: $color-white;
+    }
+}
+
+.topbar-buttons {
+    padding-top: 3px;
+    a {
+        position: relative;
+        display: inline-block;
+        font-size: 25px;
+        color: $color-white;
+        margin-right: 26px;
+        &:last-child {
+            margin-right: 0;
+        }
+        span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            top: -3px;
+            text-align: center;
+            color: $color-white;
+            font-size: 10px;
+            padding-top: 2px;
+            border-radius: 50%;
+            font-weight: 600;
+            background: $primary-color-bright;
+        }
+    }
+}

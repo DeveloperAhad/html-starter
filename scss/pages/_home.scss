@@ -1,0 +1,19 @@
+@import "../mixins/media-queries";
+
+// home page style start
+
+.main-warp {
+  padding-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .main-left-width {
+      width: 24%;
+  }
+  .main-center-width {
+      width: 52%;
+  }
+  .main-right-width {
+      width: 24%;
+  }
+}

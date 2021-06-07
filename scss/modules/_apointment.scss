@@ -1,0 +1,48 @@
+@import "../mixins/media-queries";
+
+
+
+// services page "apointment" section style 
+.apointment_section {background-image: url(../img/backgroun_images/apointment_section-bg.png);}
+.service-apointment-section {background-image: url(../img/services-single-page-img/Background.png);}
+
+
+// aponintment section style start
+.apointment_section {
+  width: 100%;
+  height: 100%;  
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  .apointment_section_content-wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 350px 0;
+
+    @include respond (phone) {
+      padding: 190px 0 140px 0;
+    }
+  
+    .apointment_section-content {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      
+      .apointment_section-title h2, .apointment_section-paragraph p, .apointment_take-btn a{
+        color: $color-white;
+      }
+
+      .apointment_section-title h2 {
+        text-transform: uppercase;
+        margin-bottom: 33px;
+      }
+
+      .apointment_section-paragraph p{
+        margin-bottom: 41px;
+      }
+    }
+  }
+}
+// aponintment section style end

@@ -1,0 +1,133 @@
+@import "../mixins/media-queries";
+
+
+// about us page "artist_infrastructure" style define here
+
+.artist_infrastructure {
+  .section_content_title {
+    text-align: center;
+  }
+}
+
+// artists section style declare here
+.section__artists {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: $primary-bg-color;
+
+  // gave the "container fluid" position:relative for slider button positioning middle
+  .container-fluid {position: relative;}
+
+  .content_title .heading-2 {
+    color: $color-white;
+  }
+
+  .btn-white-outline_blue {
+    color: $color-white;
+  }
+
+  // slider button postioning
+  .slider-btn {
+    .prev-button,
+    .next-button {
+      top: calc(50% - 43px);
+    }
+
+    .prev-button {
+      margin-left: 30px;
+    }
+
+    .next-button {
+      margin-right: 30px;
+    }
+
+  }
+
+  .artist__slider {
+    width: 100vw;
+    height: 100%;
+
+    .artist_slider-single {
+      cursor: pointer;
+      overflow: hidden;
+
+      .artist_slider-single-image:hover .artist_slider_bg {
+        transition: 0.4s ease-in-out;
+        backface-visibility: hidden;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .artist_slider-single-image {
+        width: 100%;
+        height: 100%;
+        
+
+        .artist_slider_bg {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          display: flex;
+          visibility: hidden;
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          transition: 0.4s ease-in-out;
+          background: rgba($primary-color-light, 0.7);
+
+          .artist_slider_text {
+            text-align: center;
+            color: $color-white;
+            text-transform: uppercase;
+
+            .artist-add_symbol {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              margin-bottom: 25px;
+
+              .guiter_pick_btn {
+                width: 50px;
+                height: 50px;
+                color: $primary-color-light;
+                font-size: 22px;
+                display: flex;
+                border: none;
+                justify-content: center;
+                align-items: center;
+                box-shadow: -2px 1px 12px 1px rgba(0, 0, 0, 0.16);
+                
+                &:focus,
+                &:active {
+                  outline: none;
+                }
+
+                .slider_plus-sign {
+                  margin: 0;
+                  color: $primary-color-light;
+                  font-size: 36px;
+                }
+              }
+            }
+
+            .artist_slider_title {
+              font-family: Arimo;
+              font-weight: 700;
+              font-size: 24px;
+              margin-bottom: 13px;
+            }
+            .artist_slider_sub-title {
+              font-family: Now;
+              font-weight: 400;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
